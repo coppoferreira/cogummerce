@@ -1,0 +1,106 @@
+<html>  
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="sign-up.css">
+        <link rel="stylesheet" href="esqueleto.css">
+    </head>
+    
+     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+            apiKey: "AIzaSyBD6iHeafxbZvWlKJyXhjY7UnbbQJFdIeY",
+            authDomain: "signup-cogummerce.firebaseapp.com",
+            databaseURL: "https://signup-cogummerce.firebaseio.com",
+            projectId: "signup-cogummerce",
+            storageBucket: "signup-cogummerce.appspot.com",
+            messagingSenderId: "417530293913"
+            };
+            firebase.initializeApp(config);
+        </script>
+
+    <body>
+           
+        
+    <div class="top-nav">
+        <ul class="tudo">
+            <div class="imagem">
+                <li><img src="coguelo.jpeg" id="imagem" alt="Icone da loja"></li>
+            </div>
+            <div class="links"> 
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="home">Home</a></li>
+            </div>
+        </ul>
+     </div>
+              
+        <h1>Crie sua conta</h1>
+            
+         <form id="app">
+            <input type="text" placeholder="Nome de usuario" name="username" id="username" required>
+
+            <input type="password" placeholder="Senha" name="password" class="txtPassword" required>
+
+            <input type="password" placeholder="Confirmacao de Senha" name="password-rpt" required>
+
+            <input type="email" placeholder="Endereco de email" name="email" class="txtEmail" required>
+
+            <input type="text" placeholder="Nome completo" name="nome" required>
+             
+            <div class="localizacao">
+                <input type="text" placeholder="Cidade" name="cidade" required>
+
+                <input type="text" placeholder="Estado" name="estado" required>
+            </div>
+             
+            <div class="info">
+                <input type="number" placeholder="CEP" name="cep" required>
+
+                <input type="number" placeholder="Telefone" name="telefone" required>
+            </div>
+
+             <input type="text" placeholder="Endereco" name="endereco" required>
+
+             <input type="text" placeholder="Complemento (Se houver)" name="complemento" required>
+
+             <p>Ao criar uma conta voce esta concordando com nossos <a href="#">Termos de Uso.</a></p>
+
+
+             <div class="button">
+                 <button type="submit" class="register" id="btnSignup" onclick="register">CADASTRAR</button>
+             </div>
+                
+        </form>
+        
+        
+       <script>
+      (function() {
+        var app = document.querySelector('#app');
+        
+        app.register = function() {
+          var email = app.txtEmail;
+          var password = app.txtPassword;
+            
+          // Register user
+          firebase.auth().createUserWithEmailAndPassword(email, password)
+            .catch(function(error) {
+              console.log('Erro no registro',error);
+            });
+        };
+        
+        // Listen to auth state changes
+        firebase.auth().onAuthStateChanged(function(user) {
+          app.user = user;
+          console.log('user', user);
+        });
+      })();
+           
+    </script>
+    </body>
+</html>
+
+
+

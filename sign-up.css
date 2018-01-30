@@ -1,0 +1,90 @@
+
+body{
+    background-color: #E3E0CC;
+}
+
+
+button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    width: 250px;    
+}
+
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    padding: 14px;
+    border-style: solid;
+    border-color: #6CD959;
+    margin-bottom: 20px;
+}
+
+input[name=username],input[name=password],input[name=password-rpt],input[name=email],input[name=nome],input[name=endereco],input[name=complemento]{
+    display: block;
+}
+
+input{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 20px;     
+}
+
+.button{
+    text-align: center;
+}
+
+input[name=nome],input[name=endereco],input[name=complemento]{
+    width: 625px;
+}
+
+input{
+    box-sizing: border-box;
+}
+
+.localizacao{
+    display: block;
+    text-align: center;
+}
+
+input[name=cidade],input[name=cep]{
+    margin-right: 25px;
+}
+
+.info{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
