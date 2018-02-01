@@ -70,7 +70,7 @@
 
 
              <div class="button">
-                 <button type="submit" class="register" id="btnSignup" >CADASTRAR</button>
+                 <button  class="register" id="btnSignup" >CADASTRAR</button>
              </div>
                 
         </form>
@@ -79,18 +79,25 @@
        <script>
       (function() {
           
-          //get Elements
-          var txtEmail = document.getElementById('txtEmail');
-          var txtPassword = document.getElementById('txtPassword');
-          var btnSignup = document.getElementById('btnSignup');
          
-         // add Sign up event
+         
+          console.log(txtPassword.value);
           
-          var email = txtEmail.value;
-          var password = txtPassword.value;
+          // add Sign up event
           
           btnSignup.addEventListener("click", function(){
+              var txtEmail = document.getElementById("txtEmail");
+              var txtPassword = document.getElementById("txtPassword");
+              var btnSignup = document.getElementById("btnSignup");
               
+               var email = txtEmail.value;
+               var password = txtPassword.value;
+              
+              console.log(txtEmail.value);
+              
+              
+              
+              firebase.auth().createUserWithEmailAndPassword(email, password);
               firebase.auth().createUserWithEmailAndPassword(email, password)
             .catch(function(error) {
                 // Handle Errors here.
@@ -112,8 +119,6 @@
             }
           });
           
-          
-       
           
       })();
            
