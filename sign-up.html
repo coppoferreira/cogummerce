@@ -31,7 +31,7 @@
             <div class="links"> 
                 <li><a href="#">Cadastro</a></li>
                 <li><a href="#">Login</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="">Contato</a></li>
                 <li><a href="#" class="home">Home</a></li>
             </div>
         </ul>
@@ -42,11 +42,11 @@
          <form id="app">
             <input type="text" placeholder="Nome de usuario" name="username" id="username" required>
 
-            <input type="password" placeholder="Senha" name="password" class="txtPassword" required>
+            <input type="password" placeholder="Senha" name="password" id="txtPassword" required>
 
             <input type="password" placeholder="Confirmacao de Senha" name="password-rpt" required>
 
-            <input type="email" placeholder="Endereco de email" name="email" class="txtEmail" required>
+            <input type="email" placeholder="Endereco de email" name="email" id="txtEmail" required>
 
             <input type="text" placeholder="Nome completo" name="nome" required>
              
@@ -70,7 +70,7 @@
 
 
              <div class="button">
-                 <button type="submit" class="register" id="btnSignup" onclick="register">CADASTRAR</button>
+                 <button type="submit" class="register" id="btnSignup" >CADASTRAR</button>
              </div>
                 
         </form>
@@ -78,24 +78,43 @@
         
        <script>
       (function() {
-        var app = document.querySelector('#app');
-        
-        app.register = function() {
-          var email = app.txtEmail;
-          var password = app.txtPassword;
-            
-          // Register user
-          firebase.auth().createUserWithEmailAndPassword(email, password)
+          
+          //get Elements
+          var txtEmail = document.getElementById('txtEmail');
+          var txtPassword = document.getElementById('txtPassword');
+          var btnSignup = document.getElementById('btnSignup');
+         
+         // add Sign up event
+          
+          var email = txtEmail.value;
+          var password = txtPassword.value;
+          
+          btnSignup.addEventListener("click", function(){
+              
+              firebase.auth().createUserWithEmailAndPassword(email, password)
             .catch(function(error) {
-              console.log('Erro no registro',error);
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // ...
+                console.log(errorMessage);
             });
-        };
-        
-        // Listen to auth state changes
-        firebase.auth().onAuthStateChanged(function(user) {
-          app.user = user;
-          console.log('user', user);
+              
         });
+          
+          
+          // add a real time listener 
+          firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                console.log(user);
+            } else {
+                console.log('not logged in');
+            }
+          });
+          
+          
+       
+          
       })();
            
     </script>
