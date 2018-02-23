@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="sign-in-new.css">
+        <link rel="stylesheet" href="esqueleto.css">
+    </head>
+    
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+    <body>
+    
+        <div class="left-half"></div>
+        
+        <div class="right-half">
+            <h1>LOGIN</h1>
+            
+            <form id="info">
+             <input type="email" placeholder="EMAIL"  id="txtEmail" required>
+             <input type="password" placeholder="SENHA"  id="txtPassword" required>
+                
+             <div class="button">
+                <button  class="register" id="btnSignup" >CONECTAR</button>   
+             </div>
+                
+            </form>
+            
+            <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+        </div>
+        
+        
+    
+    
+    
+    
+    
+    </body>
+
+
+</html>
