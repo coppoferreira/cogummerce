@@ -1,33 +1,269 @@
+<!DOCTYPE html>
+<html>
 <head>
-    
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="esqueleto.css">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/esqueleto.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
     <meta charset="utf-8">
 
 </head>
 
 <body>
-    
-    
+
+  <header>
         <div class="top-nav">
         <ul class="tudo">
             <div class="imagem">
                 <li><img src="coguelo.jpeg" id="imagem" alt="Icone da loja"></li>
             </div>
-            <div class="links"> 
-                <li><a href="#">Cadastro</a></li>
-                <li><a href="#">Login</a></li>
+            <div class="links">
+                <li><a href="sign-up.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#" class="home">Home</a></li>
             </div>
         </ul>
+      </div>
+</header>
+
+<section id="home">
+<!-- precisa fazer essa porra caber-->
+  <div style="background-image : url('images/home.jpg')"><img src="images/home.jpg"  width="auto"> </div>
+</section>
+
+<section id="produtos">
+  <div class="container">
+    <div class="text-center">
+      <h1 >Conheça nosso produtos</h1>
     </div>
 
+    <div class="container">
+      <div class="row">
 
-    <footer class="footer">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 center" style="padding-top: 20px">
+          <img src="images/cogumelo.jpg" height="auto" width="256px">
+          <div class="text-center">
+            <p> <h4><b>Cogumelo 1</b></h4></p>
+          </div>
+        </div>
 
-    
-    </footer>
-    
-   
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 center" style="padding-top: 20px">
+          <img src="images/cogumelo.jpg" height="auto" width="256px">
+          <div class="text-center">
+            <p> <h4><b>Cogumelo 2</b></h4></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 center" style="padding-top: 20px">
+          <img src="images/cogumelo.jpg" height="auto" width="256px">
+          <div class="text-center">
+            <p> <h4><b>Cogumelo 3</b></h4></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 center" style="padding-top: 20px">
+          <img src="images/cogumelo.jpg" height="auto" width="256px">
+          <div class="text-center">
+            <p> <h4><b>Cogumelo 4</b></h4></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="height:78px; background-color:#d3d3d3"> </div>
+<section id="loja" style="padding-top: 20px; padding-bottom: 30px">
+  <div class="container">
+    <div class="col-lg-8">
+      <h2>Nome do Cogumelo</h2>
+
+    </div>
+    <div class="col-lg-2">
+      <h2>Preço</h2>
+    </div>
+    <div class="col-lg-2">
+      <h2>Quantidade</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="images/cogumelo.jpg" width="293px">
+      </div>
+      <div class="col-lg-4">
+        <h4>Bandeja Grande (aprox XXX g)</h4>
+         </br>
+        <h4>Bandeja Média (aprox XXX g)</h4>
+         </br>
+        <h4>Bandeja Pequena (aprox XXX g)</h4>
+       </div>
+       <div class="col-lg-2">
+         <h4>R$ XX,XX</h4>
+           </br>
+         <h4>R$ XX,XX</h4>
+           </br>
+         <h4>R$ XX,XX</h4>
+       </div>
+       <div class="col-lg-2 text-center">
+          <div>
+              <a href="#" class="qty qty-minus">-</a>
+                <input type="numeric" value="0" size="1"/>
+              <a href="#" class="qty qty-plus">+</a>
+          </div>
+        </br>
+          <div>
+              <a href="#" class="qty qty-minus">-</a>
+                <input type="numeric" value="0" size="1" />
+              <a href="#" class="qty qty-plus">+</a>
+          </div>
+        </br>
+          <div>
+            <a href="#" class="qty qty-minus">-</a>
+              <input type="numeric" value="0" size="1"/>
+            <a href="#" class="qty qty-plus">+</a>
+          </div>
+       </div>
+       <div class="row col-lg-10"></div>
+       <div class="row col-lg-10"></div>
+       <div class="col-lg-2 text-center " style="margin-left: 30px">
+       </br>
+         <button class="btn">Adiconar</button>
+       </div>
+     </div>
+    </div>
+    <div style="height:78px; background-color:#d3d3d3"> </div>
+      <div class="container">
+        <div class="col-lg-8">
+          <h2>Nome do Cogumelo</h2>
+
+        </div>
+        <div class="col-lg-2">
+          <h2>Preço</h2>
+        </div>
+        <div class="col-lg-2">
+          <h2>Quantidade</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="images/cogumelo.jpg" width="293px">
+          </div>
+          <div class="col-lg-4">
+           <h4>Bandeja Grande (aprox XXX g)</h4>
+            </br>
+           <h4>Bandeja Média (aprox XXX g)</h4>
+            </br>
+           <h4>Bandeja Pequena (aprox XXX g)</h4>
+          </div>
+          <div class="col-lg-2">
+            <h4>R$ XX,XX</h4>
+              </br>
+            <h4>R$ XX,XX</h4>
+              </br>
+            <h4>R$ XX,XX</h4>
+          </div>
+          <div class="col-lg-2 text-center">
+            <div>
+                <a href="#" class="qty qty-minus">-</a>
+                  <input type="numeric" value="0" size="1"/>
+                <a href="#" class="qty qty-plus">+</a>
+            </div>
+          </br>
+            <div>
+                <a href="#" class="qty qty-minus">-</a>
+                  <input type="numeric" value="0" size="1" />
+                <a href="#" class="qty qty-plus">+</a>
+            </div>
+          </br>
+            <div>
+              <a href="#" class="qty qty-minus">-</a>
+                <input type="numeric" value="0" size="1"/>
+              <a href="#" class="qty qty-plus">+</a>
+            </div>
+          </div><!--fecha coluna de botões-->
+        </div>
+        <div class="row col-lg-10"></div>
+        <div class="col-lg-2 text-center " style="margin-left: 30px">
+        </br>
+          <button class="btn">Adiconar</button>
+        </div>
+      </div>
+            <div style="height:78px; background-color:#d3d3d3"> </div>
+</section>
+<script src="js/cart.js"></script>
+<script>
+ $('.visibility-cart').on('click',function(){
+
+  var $btn =  $(this);
+  var $cart = $('.cart');
+  console.log($btn);
+
+  if ($btn.hasClass('is-open')) {
+     $btn.removeClass('is-open');
+     $btn.text('O')
+     $cart.removeClass('is-open');
+     $cart.addClass('is-closed');
+     $btn.addClass('is-closed');
+  } else {
+     $btn.addClass('is-open');
+     $btn.text('X')
+     $cart.addClass('is-open');
+     $cart.removeClass('is-closed');
+     $btn.removeClass('is-closed');
+  }
+
+
+});
+
+    // SHOPPING CART PLUS OR MINUS
+    $('a.qty-minus').on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest('div').find('input');
+        var value = parseInt($input.val());
+
+        if (value > 1) {
+            value = value - 1;
+        } else {
+            value = 0;
+        }
+
+    $input.val(value);
+
+    });
+
+    $('a.qty-plus').on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest('div').find('input');
+        var value = parseInt($input.val());
+
+        if (value < 100) {
+        value = value + 1;
+        } else {
+            value =100;
+        }
+
+        $input.val(value);
+    });
+
+// RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
+$('input').on('blur', function(){
+
+    var input = $(this);
+    var value = parseInt($(this).val());
+
+        if (value < 0 || isNaN(value)) {
+            input.val(0);
+        } else if
+            (value > 100) {
+            input.val(100);
+        }
+});</script>
+
 </body>
+<footer class="footer">
+  <p>Aqui tem um footer</p>
+
+
+</footer>
+</html>
