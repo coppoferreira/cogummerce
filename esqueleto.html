@@ -1,79 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:height="http://www.w3.org/1999/xhtml">
 <head>
-
+<!--Sheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/esqueleto.css">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <meta charset="utf-8">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.default.css" rel="stylesheet">
 
+    <meta charset="utf-8">
+<!--End Sheets-->
 </head>
 
 <body>
-
+<!--NavBar-->
   <header>
-        <div class="top-nav">
-        <ul class="tudo">
-            <div class="imagem">
-                <li><img src="coguelo.jpeg" id="imagem" alt="Icone da loja"></li>
-            </div>
-            <div class="links">
-                <li><a href="sign-up.html">Cadastro</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#" class="home">Home</a></li>
-            </div>
-        </ul>
+      <div class="container">
+        <img src="images/logo.jpeg" class="logo">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Cadastro</a></li>
+          </ul>
+        </nav>
       </div>
-</header>
+  </header>
+<!--End NavBar-->
 
-<section id="home">
-<!-- precisa fazer essa porra caber-->
-  <div style="background-image : url('images/home.jpg')"><img src="images/home.jpg"  width="auto"> </div>
-</section>
+<!--Botao fixo-->
+<a href="#"><button class="btn" onclick="overlayOn() "id="fixedbutton"><i class="glyphicon glyphicon-shopping-cart"></i></button></a>
 
+<!--Modal Carrinho-->
+<div id="overlay" ondblclick="overlayOff()">
+  <container>
+  <div class="col-lg-4 text-center" style="left:33%; top:25%;height:400px; background-color: rgba(255,255,255,1)">
+    <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="400" id="show-cart">
+
+    </table>
+      <br>
+    <button class="btn" style="font-size:1.0em">Finalizar Compra</button>
+  </div>
+</container>
+</div>
+<!--End Modal-->
+
+<!--Home-->
 <section id="produtos">
   <div class="container">
     <div class="text-center">
-      <h1 >Conheça nosso produtos</h1>
+      <h1 >Conheça nossos produtos</h1>
     </div>
 
-    <div class="container">
-      <div class="row">
+    <section id="home">
+        <!--Banner Principal-->
+      <div id="main-carousel" class="carousel" data-ride="carousel" style="background-color: rgba(255,255,255,0); ">
 
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 center" style="padding-top: 20px">
-          <img src="images/cogumelo.jpg" height="auto" width="256px">
-          <div class="text-center">
-            <p> <h4><b>Cogumelo 1</b></h4></p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 center" style="padding-top: 20px">
-          <img src="images/cogumelo.jpg" height="auto" width="256px">
-          <div class="text-center">
-            <p> <h4><b>Cogumelo 2</b></h4></p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 center" style="padding-top: 20px">
-          <img src="images/cogumelo.jpg" height="auto" width="256px">
-          <div class="text-center">
-            <p> <h4><b>Cogumelo 3</b></h4></p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 center" style="padding-top: 20px">
-          <img src="images/cogumelo.jpg" height="auto" width="256px">
-          <div class="text-center">
-            <p> <h4><b>Cogumelo 4</b></h4></p>
-          </div>
+        <div class="carousel-inner">
+          <!-- Modelo de item do carrossel-->
+          <!--
+          <div class="item" style="background-image : url('images/<nomeDaImagem>.png');">
+          <div class="carousel-caption">
+          <div>
+          <h2> Lorem Ipsum </h2><br>
+          <h2 class="animated bounceInLeft">dolor ametis</h2>
         </div>
       </div>
+    </div>-->
+    <div class="item active" style="height: auto; width: auto;">
+        <img src="images/cogumelo-banner-1.png" style="height: 37em; margin-left:12em">
     </div>
+    <div class="item"  style="height: auto; width: auto;">
+      <img src="images/cogumelo-banner-2.jpg" style="height:37em; margin-left:10em">
+    </div>
+  </div>
+
+  <a class="carousel-left member-carousel-control hidden-xs" href="#main-carousel" data-slide="prev"></a>
+  <a class="carousel-right member-carousel-control hidden-xs" href="#main-carousel" data-slide="next"></a>
+</div>
+        <!--End Banner Principal-->
+    </section>
+
   </div>
 </section>
 
-<div style="height:78px; background-color:#d3d3d3"> </div>
+<div class="divisoria"> </div>
 <section id="loja" style="padding-top: 20px; padding-bottom: 30px">
   <div class="container">
     <div class="col-lg-8">
@@ -87,110 +102,147 @@
       <h2>Quantidade</h2>
     </div>
     <div class="row">
+      <container>
       <div class="col-lg-4">
-        <img src="images/cogumelo.jpg" width="293px">
+        <img src="images/cogumelo-banner-1.png" width="293px">
+      <br>
+          <!--<div class="owl-carousel " >
+              <img src="images/cogumelo-banner-1.png" width="70px">
+              <img src="images/cogumelo-banner-1.png" width="70px">
+              <img src="images/cogumelo-banner-1.png" width="70px">
+              <img src="images/cogumelo-banner-1.png" width="70px">
+              <img src="images/cogumelo-banner-1.png" width="70px">
+          </div>-->
+      <img src="images/cogumelo-banner-1.png" width="87px">
+      <img src="images/cogumelo-banner-1.png" width="87px" style=" margin-left:13px">
+      <img src="images/cogumelo-banner-1.png" width="86px" style=" margin-left:12px">
       </div>
+      <div>
+
+      </div>
+    </container>
       <div class="col-lg-4">
         <h4>Bandeja Grande (aprox XXX g)</h4>
-         </br>
+         <br>
         <h4>Bandeja Média (aprox XXX g)</h4>
-         </br>
+         <br>
         <h4>Bandeja Pequena (aprox XXX g)</h4>
        </div>
        <div class="col-lg-2">
          <h4>R$ XX,XX</h4>
-           </br>
+           <br>
          <h4>R$ XX,XX</h4>
-           </br>
+           <br>
          <h4>R$ XX,XX</h4>
        </div>
        <div class="col-lg-2 text-center">
           <div>
               <a href="#" class="qty qty-minus">-</a>
-                <input type="numeric" value="0" size="1"/>
+                <input class="cogumelo1" type="numeric" value="0" size="1"/>
               <a href="#" class="qty qty-plus">+</a>
           </div>
-        </br>
+        <br>
           <div>
               <a href="#" class="qty qty-minus">-</a>
-                <input type="numeric" value="0" size="1" />
+                <input class="cogumelo1" type="numeric" value="0" size="1" />
               <a href="#" class="qty qty-plus">+</a>
           </div>
-        </br>
+        <br>
           <div>
             <a href="#" class="qty qty-minus">-</a>
-              <input type="numeric" value="0" size="1"/>
+              <input class="cogumelo1" type="numeric" value="0" size="1"/>
             <a href="#" class="qty qty-plus">+</a>
           </div>
-       </div>
-       <div class="row col-lg-10"></div>
-       <div class="row col-lg-10"></div>
-       <div class="col-lg-2 text-center " style="margin-left: 30px">
-       </br>
-         <button class="btn">Adiconar</button>
+        <br>
+
+        <br>
+        <button class="btn add">Adicionar</button>
        </div>
      </div>
+   <br>
     </div>
-    <div style="height:78px; background-color:#d3d3d3"> </div>
-      <div class="container">
-        <div class="col-lg-8">
-          <h2>Nome do Cogumelo</h2>
+
+
+    <div class="divisoria"> </div>
+    <div class="container">
+      <div class="col-lg-8">
+        <h2>Nome do Cogumelo</h2>
+
+      </div>
+      <div class="col-lg-2">
+        <h2>Preço</h2>
+      </div>
+      <div class="col-lg-2">
+        <h2>Quantidade</h2>
+      </div>
+      <div class="row">
+        <container>
+        <div class="col-lg-4">
+          <img src="images/cogumelo-banner-2.jpg" width="293px">
+        </br>
+        <img src="images/cogumelo-banner-2.jpg" width="87px">
+        <img src="images/cogumelo-banner-2.jpg" width="87px" style=" margin-left:12px">
+        <img src="images/cogumelo-banner-2.jpg" width="86px" style=" margin-left:13px">
+        </div>
+
+        <div>
 
         </div>
-        <div class="col-lg-2">
-          <h2>Preço</h2>
-        </div>
-        <div class="col-lg-2">
-          <h2>Quantidade</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="images/cogumelo.jpg" width="293px">
-          </div>
-          <div class="col-lg-4">
-           <h4>Bandeja Grande (aprox XXX g)</h4>
-            </br>
-           <h4>Bandeja Média (aprox XXX g)</h4>
-            </br>
-           <h4>Bandeja Pequena (aprox XXX g)</h4>
-          </div>
-          <div class="col-lg-2">
-            <h4>R$ XX,XX</h4>
-              </br>
-            <h4>R$ XX,XX</h4>
-              </br>
-            <h4>R$ XX,XX</h4>
-          </div>
-          <div class="col-lg-2 text-center">
+      </container>
+        <div class="col-lg-4">
+          <h4>Bandeja Grande (aprox XXX g)</h4>
+           <br>
+          <h4>Bandeja Média (aprox XXX g)</h4>
+           <br>
+          <h4>Bandeja Pequena (aprox XXX g)</h4>
+         </div>
+         <div class="col-lg-2">
+           <h4>R$ XX,XX</h4>
+             <br>
+           <h4>R$ XX,XX</h4>
+             <br>
+           <h4>R$ XX,XX</h4>
+         </div>
+         <div class="col-lg-2 text-center cogumelog">
             <div>
-                <a href="#" class="qty qty-minus">-</a>
-                  <input type="numeric" value="0" size="1"/>
+                <a href="#" class="qty qty-minus" >-</a>
+                  <input class="cogumelo2" type="numeric" value="0" size="1"/>
                 <a href="#" class="qty qty-plus">+</a>
             </div>
-          </br>
+          <br>
             <div>
                 <a href="#" class="qty qty-minus">-</a>
-                  <input type="numeric" value="0" size="1" />
+                  <input class="cogumelo2" type="numeric" value="0" size="1" />
                 <a href="#" class="qty qty-plus">+</a>
             </div>
-          </br>
+          <br>
             <div>
               <a href="#" class="qty qty-minus">-</a>
-                <input type="numeric" value="0" size="1"/>
+                <input class="cogumelo2" type="numeric" value="0" size="1"/>
               <a href="#" class="qty qty-plus">+</a>
+            <br>
+            <br>
+            <br>
+              <button class="btn add">Adicionar</button>
             </div>
-          </div><!--fecha coluna de botões-->
-        </div>
-        <div class="row col-lg-10"></div>
-        <div class="col-lg-2 text-center " style="margin-left: 30px">
-        </br>
-          <button class="btn">Adiconar</button>
-        </div>
-      </div>
-            <div style="height:78px; background-color:#d3d3d3"> </div>
+
+         </div>
+       </div>
+     <br>
+    </div>
+    <div class="divisoria"> </div>
 </section>
-<script src="js/cart.js"></script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/cart.js"></script>
+
 <script>
+   // $(document).ready(function(){
+   //     $('.owl-carousel').owlCarousel();
+   // });
+
  $('.visibility-cart').on('click',function(){
 
   var $btn =  $(this);
@@ -213,6 +265,20 @@
 
 
 });
+//escutador de eventos pra cada botão
+    $('button.add').on("click",function(e){
+      e.preventDefault();
+      var $this = $(this);
+      var $input = $('.cogumelog input.cogumelo2');
+      var value = parseInt($input.val());
+      //console.log(value);
+      for(var i=0;i<3;i++){
+        if($input[i].value>0){
+          addItemtocart("Cogumelo "+i, 2, $input[i].value)
+        }
+        //console.log($input[i].value)
+    }
+    });
 
     // SHOPPING CART PLUS OR MINUS
     $('a.qty-minus').on('click', function(e) {
@@ -246,6 +312,13 @@
         $input.val(value);
     });
 
+
+    $("#fixedbutton").on('click', function(e){
+      e.preventDefault();
+      overlayOn();
+      displayCart();
+    });
+
 // RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
 $('input').on('blur', function(){
 
@@ -258,12 +331,15 @@ $('input').on('blur', function(){
             (value > 100) {
             input.val(100);
         }
-});</script>
+});
+
+
+</script>
+
 
 </body>
 <footer class="footer">
-  <p>Aqui tem um footer</p>
-
+   <p>Nome da empresa/ www.dominio.com.br/ Endereco completo/</p> <p>Cidade - ESTADO - CEP: XXXXX-XXXX/ CNPJ: XX.XXX.XXXX/XXXXXXX-XX/Razao Social: /Telefone:(xx)XXXX-XXXX/ Facebook/ Instagram</p>
 
 </footer>
 </html>

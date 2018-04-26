@@ -10,10 +10,13 @@ var Item = function(name, price, count){
 
 };
 
+
 function addItemtocart(name, price, count){
   for(var i in cart){
     if(cart[i].name === name){
-      cart[i].count += count;
+      console.log("antes:"+cart[i].count+"\n"+"a adicionar:"+count);
+      cart[i].count = parseInt(cart[i].count)+parseInt(count);
+      console.log("depois:"+cart[i].count);
       savecart();
       return;
     }
@@ -80,6 +83,49 @@ function listcart(){
   return cartcopy;
 }
 
+function displayCart(){
+  var cartArray=listcart();
+  var total=0;
+  var output="<tr>";
+  output+="<td height='19' width='20%'>"+"Tipo de Cogumelo"+"</td>";
+  output+="<td height='19' width='20%'>"+"Preço"+"</td>";
+  output+="<td colspan=2' width='40%' height='19'>"+"Quantidade"+"</td>";
+  output+="<td height='19' width='20%'>"+"Total"+"</td>";
+  output+="</tr>";
+
+  //linha em branco separando
+  output+="<tr>";
+  output+="<td height='19' width='20%'></td>";
+  output+="<td height='19' width='20%'></td>";
+  output+="<td colspan='2' height='19' width='40%'></td>";
+  output+="<td height='19' width='20%'></td>";
+  output+="</tr>";
+
+
+    for(var i in cartArray){
+    output+="<tr>";
+    output+="<td height='19' width='20%'>"+cartArray[i].name+"</td>";
+    output+="<td height='19' width='20%'>"+cartArray[i].price+"</td>";
+    output+="<td colspan='2' height='19' width='40%'>"+cartArray[i].count+"</td>";
+    output+="<td height='19' width='20%'>"+(cartArray[i].price * cartArray[i].count)+"</td>";
+    output+="</tr>";
+    total+=(cartArray[i].price * cartArray[i].count);
+  }
+    output+="<tr>";
+    output+="<td height='19' width='20%'></td>";
+    output+="<td height='19' width='20%'></td>";
+    output+="<td colspan='2' height='19' width='40%'></td>";
+    output+="<td height='19' width='20%'></td>";
+    output+="</tr>";
+
+    output+="<tr>";
+    output+="<td height='19' width='20%' class='text-center'>"+"Preço Total:"+"</td>";
+    output+="<td height='19' width='20%'></td>";
+    output+="<td colspan='2' height='19' width='40'></td>";
+    output+="<td height='19' width='20%' >"+total+"</td>";
+  $("#show-cart").html(output)
+}
+
 function savecart(){
   localStorage.setItem("shoppingcart", JSON.stringify(cart));
 }
@@ -87,3 +133,24 @@ function savecart(){
 function loadcart(){
   cart = JSON.parse(localStorage.getItem("shoppingcart" ));
 }
+
+function overlayOn(){
+  document.getElementById("overlay").style.display = "block";
+}
+
+function overlayOff(){
+  document.getElementById("overlay").style.display = "none";
+}
+
+//Preloder script
+jQuery(window).load(function(){'use strict';
+
+	// Slider Height
+	var slideHeight = $(window).height();
+	$('#home .carousel-inner .item, #home .video-container').css('height',slideHeight);
+
+	$(window).resize(function(){'use strict',
+		$('#home .carousel-inner .item, #home .video-container').css('height',slideHeight);
+	});
+
+});

@@ -1,3 +1,107 @@
+/*body {*/
+	/*margin: 0;*/
+	/*background: #E3E0CC;*/
+	/*font-family: 'Work Sans', sans-serif;*/
+	/*font-weight: 400;*/
+
+
+/*}*/
+
+body {
+    font-family: 'Myriad Pro', sans-serif;
+    position: relative;
+    font-weight:400;
+    background: #fff;
+    color:#43484E
+}
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #6CD959;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+  width: 40px;
+  height: 60px;
+}
+
+nav {
+  float: right;
+
+
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: white;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+footer{
+    background: #6CD959;
+    margin-top: 700px;
+    font-size: 14px;
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    color: white;
+}
 .top-nav{
     background-color: #6CD959;
     overflow: hidden;
@@ -37,18 +141,20 @@
 
 
 a.qty {
-  width: 10em;
+  width: 1em;
   line-height: 1em;
-  border-radius: 2em;
+  border-radius: 30em;
   font-size: 2.5em;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
   background: #6CD959;
   color: #fff;
 }
 
 a.qty:hover {
   background: #6CD959;
+  text-decoration: none;
 }
 
 input {
@@ -66,4 +172,45 @@ input {
   background: #6CD959;
   color: #fff;
   box-shadow: 0 3px 0 rgba(108, 217, 89, 1)
+}
+
+.divisoria{
+  height: 78px;
+  background-color: #d3d3d3;
+}
+
+#fixedbutton {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 99;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+
+body  section{
+    padding: 75px 0;
 }

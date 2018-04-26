@@ -1,0 +1,160 @@
+
+
+
+.conpec {
+	color: #4286f4;
+	/*font-size: 25px;*/
+}
+
+.heart {
+	font-size: 17px;
+	transition: color 0.5s ease;
+}
+
+.conpec:hover ~ .heart, .heart:hover {
+	color: #ff6708;
+}
+
+/*======================
+====Main Slider CSS=====
+=======================*/
+.home-pattern {
+	height:100%;
+	position:absolute;
+	width:100%;
+	z-index:1;
+	left:0;
+	bottom:0;
+	opacity:0.2;
+}
+
+#home{
+  padding: 0;
+  overflow: hidden;
+  position:relative
+}
+
+#main-carousel .carousel-inner .item {
+	background-size:cover;
+	height: auto;
+	background: no-repeat 50% 50%;
+}
+
+#main-carousel .carousel-indicators {
+	bottom:15px
+}
+
+#main-carousel .carousel-indicators li{
+	background: rgba(0, 0, 0, 0);
+	border: 1px solid #fff;
+	width: 13px;
+	height: 13px;
+	margin-left: 5px;
+	text-indent: -9999px;
+	display: inline-block;
+}
+
+.carousel-indicators .active{
+	background-color: #fff !important;
+	height: auto;
+
+}
+
+.slider-content {
+	height: 100%;
+}
+
+#main-carousel .carousel-caption {
+	display: table;
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 11;
+}
+
+#main-carousel .carousel-caption > div{
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#main-carousel .carousel-inner h2 {
+	color: #f6f6f6;
+	display: inline-block;
+	font-family: roboto;
+	font-size: 55px;
+	font-weight: 800;
+	margin-bottom: 40px;
+	text-shadow: none;
+	text-transform: uppercase;
+}
+
+#main-carousel .carousel-inner h2 span{
+  color:#7ab700;
+}
+
+#main-carousel .carousel-inner p {
+	color: #f6f6f6;
+	font-family: roboto;
+	font-size: 24px;
+	font-weight: 300;
+	margin-bottom: 59px;
+	margin-top: 0;
+	text-shadow:none;
+}
+
+#main-carousel .carousel-left{
+	left:-50px;
+}
+
+#main-carousel .carousel-right{
+	right:-50px;
+}
+
+#main-carousel:hover .carousel-left{
+	left:0px;
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+}
+
+#main-carousel:hover .carousel-right{
+	right:0px;
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+}
+
+#main-carousel .carousel-left,
+#main-carousel .carousel-right{
+	padding: 15px;
+	z-index: 12;
+	font-size: 60px;
+	color: rgba(255, 255, 255, 0.52);
+	top: 50%;
+	position: absolute;
+	margin-top: -60px;
+	text-align: center;
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+}
+
+.carousel-right {
+  right:65px
+}
+
+.carousel-left {
+  left:65px
+}
+
+#main-carousel .carousel-left:hover,
+#main-carousel .carousel-right:hover{
+	color: #F6F6F6;
+}
+
+
