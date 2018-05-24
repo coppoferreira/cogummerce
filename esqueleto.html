@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:height="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <!--Sheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/esqueleto.css">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
@@ -32,8 +34,8 @@
   </header>
 <!--End NavBar-->
 
-<!--Botao fixo-->
-<a href="#"><button class="btn" onclick="overlayOn() "id="fixedbutton"><i class="glyphicon glyphicon-shopping-cart"></i></button></a>
+<!--Botao fixo--><!--TODO:BOOTSTRSP PORRA! (E APAGAR ESSE TODO TBM)-->
+<a href="#"><button class="btn" onclick="overlayOn() " id="fixedbutton"><i class="glyphicon glyphicon-shopping-cart"></i></button></a>
 
 <!--Modal Carrinho-->
 <div id="overlay" ondblclick="overlayOff()">
@@ -72,10 +74,16 @@
       </div>
     </div>-->
     <div class="item active" style="height: auto; width: auto;">
-        <img src="images/cogumelo-banner-1.png" style="height: 37em; margin-left:12em">
+        <img src="images/cogumelo-banner-1.jpeg" style="height: 37em; margin-left:19em">
     </div>
     <div class="item"  style="height: auto; width: auto;">
-      <img src="images/cogumelo-banner-2.jpg" style="height:37em; margin-left:10em">
+      <img src="images/cogumelo-banner-2.jpeg" style="height:37em; margin-left:19em">
+    </div>
+    <div class="item"  style="height: auto; width: auto;">
+      <img src="images/cogumelo-banner-3.jpeg" style="height:37em; margin-left:19em">
+    </div>
+    <div class="item"  style="height: auto; width: auto;">
+      <img src="images/cogumelo-banner-4.jpeg" style="height:37em; margin-left:19em">
     </div>
   </div>
 
@@ -91,34 +99,26 @@
 <div class="divisoria"> </div>
 <section id="loja" style="padding-top: 20px; padding-bottom: 30px">
   <div class="container">
-    <div class="col-lg-8">
+   <div class="row">
+    <div class="col-xl-8">
       <h2>Nome do Cogumelo</h2>
 
     </div>
-    <div class="col-lg-2">
+    <div class="col-xl-2">
       <h2>Preço</h2>
     </div>
-    <div class="col-lg-2">
+    <div class="col-xl-2">
       <h2>Quantidade</h2>
     </div>
+   </div>
     <div class="row">
       <container>
-      <div class="col-lg-4">
-        <img src="images/cogumelo-banner-1.png" width="293px">
+      <div class="col-xl-4">
+        <img src="images/cogumelo-produto-1.png" width="293px">
       <br>
-          <!--<div class="owl-carousel " >
-              <img src="images/cogumelo-banner-1.png" width="70px">
-              <img src="images/cogumelo-banner-1.png" width="70px">
-              <img src="images/cogumelo-banner-1.png" width="70px">
-              <img src="images/cogumelo-banner-1.png" width="70px">
-              <img src="images/cogumelo-banner-1.png" width="70px">
-          </div>-->
-      <img src="images/cogumelo-banner-1.png" width="87px">
-      <img src="images/cogumelo-banner-1.png" width="87px" style=" margin-left:13px">
-      <img src="images/cogumelo-banner-1.png" width="86px" style=" margin-left:12px">
-      </div>
-      <div>
-
+      <img src="images/cogumelo-produto-1.png" width="87px">
+      <img src="images/cogumelo-produto-1.png" width="87px">
+      <img src="images/cogumelo-produto-1.png" width="86px">
       </div>
     </container>
       <div class="col-lg-4">
@@ -178,11 +178,11 @@
       <div class="row">
         <container>
         <div class="col-lg-4">
-          <img src="images/cogumelo-banner-2.jpg" width="293px">
+          <img src="images/cogumelo-produto-2.jpg" width="293px">
         </br>
-        <img src="images/cogumelo-banner-2.jpg" width="87px">
-        <img src="images/cogumelo-banner-2.jpg" width="87px" style=" margin-left:12px">
-        <img src="images/cogumelo-banner-2.jpg" width="86px" style=" margin-left:13px">
+        <img src="images/cogumelo-produto-2.jpg" width="87px">
+        <img src="images/cogumelo-produto-2.jpg" width="87px" style=" margin-left:12px">
+        <img src="images/cogumelo-produto-2.jpg" width="86px" style=" margin-left:13px">
         </div>
 
         <div>
@@ -233,108 +233,11 @@
     <div class="divisoria"> </div>
 </section>
 
+
 <script src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/cart.js"></script>
-
-<script>
-   // $(document).ready(function(){
-   //     $('.owl-carousel').owlCarousel();
-   // });
-
- $('.visibility-cart').on('click',function(){
-
-  var $btn =  $(this);
-  var $cart = $('.cart');
-  console.log($btn);
-
-  if ($btn.hasClass('is-open')) {
-     $btn.removeClass('is-open');
-     $btn.text('O')
-     $cart.removeClass('is-open');
-     $cart.addClass('is-closed');
-     $btn.addClass('is-closed');
-  } else {
-     $btn.addClass('is-open');
-     $btn.text('X')
-     $cart.addClass('is-open');
-     $cart.removeClass('is-closed');
-     $btn.removeClass('is-closed');
-  }
-
-
-});
-//escutador de eventos pra cada botão
-    $('button.add').on("click",function(e){
-      e.preventDefault();
-      var $this = $(this);
-      var $input = $('.cogumelog input.cogumelo2');
-      var value = parseInt($input.val());
-      //console.log(value);
-      for(var i=0;i<3;i++){
-        if($input[i].value>0){
-          addItemtocart("Cogumelo "+i, 2, $input[i].value)
-        }
-        //console.log($input[i].value)
-    }
-    });
-
-    // SHOPPING CART PLUS OR MINUS
-    $('a.qty-minus').on('click', function(e) {
-        e.preventDefault();
-        var $this = $(this);
-        var $input = $this.closest('div').find('input');
-        var value = parseInt($input.val());
-
-        if (value > 1) {
-            value = value - 1;
-        } else {
-            value = 0;
-        }
-
-    $input.val(value);
-
-    });
-
-    $('a.qty-plus').on('click', function(e) {
-        e.preventDefault();
-        var $this = $(this);
-        var $input = $this.closest('div').find('input');
-        var value = parseInt($input.val());
-
-        if (value < 100) {
-        value = value + 1;
-        } else {
-            value =100;
-        }
-
-        $input.val(value);
-    });
-
-
-    $("#fixedbutton").on('click', function(e){
-      e.preventDefault();
-      overlayOn();
-      displayCart();
-    });
-
-// RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
-$('input').on('blur', function(){
-
-    var input = $(this);
-    var value = parseInt($(this).val());
-
-        if (value < 0 || isNaN(value)) {
-            input.val(0);
-        } else if
-            (value > 100) {
-            input.val(100);
-        }
-});
-
-
-</script>
 
 
 </body>

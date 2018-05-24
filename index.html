@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Required meta tags-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--End meta tags-->
+
+    <!--CSS files-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/esqueleto.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!--End CSS-->
+    <meta property="og:url"           content="https://www.icryeverytime.com" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Your Website Title" />
+    <meta property="og:description"   content="Your description" />
+    <!--<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />-->
+
+    <title>Cogummerce</title>
+</head>
+
+<body>
+<!--https://developers.facebook.com/docs/plugins/like-button--> <!--Usar esse link pra setar o curtir-->
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--End Facebook configuration-->
+
+    <!--NavBar-->
+    <header>
+        <div class="container">
+            <img src="images/logo.jpeg" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--End NavBar-->
+
+
+    <!--Carousel de produtos-->
+    <section id="produtos">
+        <div class="container">
+            <div class="text-center">
+                <h1>Conheça nossos produtos</h1>
+            </div>
+
+            <div id="banner-produtos" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block  w-100" src="http://via.placeholder.com/790x400" alt="First Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block  w-100" src="http://via.placeholder.com/790x400" alt="Second Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block  w-100" src="http://via.placeholder.com/790x400" alt="Third Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block  w-100" src="http://via.placeholder.com/790x400" alt="Fourth Slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#banner-produtos" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#banner-produtos" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--End Carousel de produtos-->
+
+    <section id="loja">
+        <div class="divisoria"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8">
+                    <h2>Nome do Cogumelo</h2>
+
+                </div>
+                <div class="col-xl-2">
+                    <h2>Preço</h2>
+                </div>
+                <div class="col-xl-2">
+                    <h2>Quantidade</h2>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-xl-4">
+                        <img src="http://via.placeholder.com/350x200">
+                        <div class="row" style="padding-left: 15px">
+                            <div class="owl-carousel">
+                                <div>
+                                    <img src="http://via.placeholder.com/50x50">
+                                </div>
+                                <div>
+                                    <img src="http://via.placeholder.com/50x50">
+                                </div>
+                                <div>
+                                    <img src="http://via.placeholder.com/50x50">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <div class="col-lg-4">
+                    <h4>Bandeja Grande (aprox XX g)</h4>
+                    <br>
+                    <h4>Bandeja Média (aprox XX g)</h4>
+                    <br>
+                    <h4>Bandeja Pequena (aprox XX g)</h4>
+                </div>
+                <div class="col-lg-2">
+                    <h4>R$ XX,XX</h4>
+                    <br>
+                    <h4>R$ XX,XX</h4>
+                    <br>
+                    <h4>R$ XX,XX</h4>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div>
+                        <a href="#" class="btn rounded-circle qty-minus">-</a>
+                        <input class="cogumelo1" type="numeric" value="0" size="1"/>
+                        <a href="#" class="btn rounded-circle qty-plus">+</a>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="#" class="btn rounded-circle qty-minus">-</a>
+                        <input class="cogumelo1" type="numeric" value="0" size="1" />
+                        <a href="#" class="btn rounded-circle qty-plus">+</a>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="#" class="btn rounded-circle qty-minus">-</a>
+                        <input class="cogumelo1" type="numeric" value="0" size="1"/>
+                        <a href="#" class="btn rounded-circle qty-plus">+</a>
+                    </div>
+                    <br>
+
+                    <br>
+                    <button class="btn add1">Adicionar</button>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="divisoria"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8">
+                    <h2>Nome do Cogumelo</h2>
+
+                </div>
+                <div class="col-xl-2">
+                    <h2>Preço</h2>
+                </div>
+                <div class="col-xl-2">
+                    <h2>Quantidade</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4">
+                    <img src="http://via.placeholder.com/350x200">
+                    <div class="row" style="padding-left: 15px">
+                        <div class="owl-carousel">
+                            <div>
+                                <img src="http://via.placeholder.com/50x50">
+                            </div>
+                            <div>
+                                <img src="http://via.placeholder.com/50x50">
+                            </div>
+                            <div>
+                                <img src="http://via.placeholder.com/50x50">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Bandeja Grande (aprox XX g)</h4>
+                    <br>
+                    <h4>Bandeja Média (aprox XX g)</h4>
+                    <br>
+                    <h4>Bandeja Pequena (aprox XX g)</h4>
+                </div>
+                <div class="col-lg-2">
+                    <h4>R$ XX,XX</h4>
+                    <br>
+                    <h4>R$ XX,XX</h4>
+                    <br>
+                    <h4>R$ XX,XX</h4>
+                </div>
+                <div class="col-lg-2 text-center cogumelo2">
+                    <div>
+                        <a href="#" class="btn rounded-circle qty-minus">-</a>
+                        <input class="cogumelo2" type="numeric" value="0" size="1"/>
+                        <a href="#" class="btn rounded-circle qty-plus">+</a>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="#" class="btn rounded-circle qty-minus">-</a>
+                        <input class="cogumelo2" type="numeric" value="0" size="1" />
+
+                        <a href="#" class="btn rounded-circle qty-plus">+</a>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="#" class="btn rounded-circle qty-minus">-</a>
+                        <input class="cogumelo2" type="numeric" value="0" size="1"/>
+                        <a href="#" class="btn rounded-circle qty-plus">+</a>
+                    </div>
+                    <br>
+
+                    <br>
+                    <button class="btn add2">Adicionar</button>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="divisoria"></div>
+    </section>
+
+
+    <!--Button trigger modal-->
+    <button type="button" id="fixedbutton" class="btn " data-toggle="modal" data-target="#modalCarrinho">
+        <img src="images/shopping-cart-icon.png" style="height: 1em">
+    </button>
+
+    <!-- Modal Carrinho-->
+    <div class="modal fade" id="modalCarrinho" tabindex="-1" role="dialog" aria-labelledby="modalCarrinhoLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCarrinhoLabel">Carrinho</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="show-cart"class="modal-body">
+                    Seu carrinho está vazio
+                </div>
+                <div class="modal-footer" id="modalFooter">
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    <button type="button" id="finalizarCompra" class="btn" data-dismiss="modal">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal Carrinho-->
+
+    <!--Modal de agradecimento-->
+    <div class="modal fade" id="modalAgradecimento" tabindex="-1" role="dialog" aria-labelledby="modalAgradecimentoLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAgradecimentoLabel">Carrinho</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    Obrigado por comprar conosco
+                </div>
+                <div class="modal-footer">
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal de agradecimento-->
+
+
+<footer class="footer">
+    <p>Nome da empresa/ www.dominio.com.br/ Endereco completo/</p> <p>Cidade - ESTADO - CEP: XXXXX-XXXX/ CNPJ: XX.XXX.XXXX/XXXXXXX-XX/Razao Social: /Telefone:(xx)XXXX-XXXX/ Facebook/ Instagram</p>
+</footer>
+        <!--Javascripts-->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel();
+        });
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            autoplay:true,
+            autoplayTimeout:1000,
+            autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:3
+                }
+            }
+        })
+    </script>
+</body>
+</html>

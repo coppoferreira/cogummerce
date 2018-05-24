@@ -140,16 +140,22 @@ footer p{
 }
 
 
-a.qty {
-  width: 1em;
-  line-height: 1em;
-  border-radius: 30em;
-  font-size: 2.5em;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  background: #6CD959;
-  color: #fff;
+/*a.qty {*/
+  /*width: 1em;*/
+  /*line-height: 1em;*/
+  /*border-radius: 30em;*/
+  /*font-size: 1.584em;*/
+  /*font-weight: bold;*/
+  /*text-align: center;*/
+  /*text-decoration: none;*/
+  /*background: #6CD959;*/
+  /*color: #fff;*/
+/*}*/
+
+
+a.btn{
+    font-weight: bold; !important;
+    font-size: 1.582em;!important;
 }
 
 a.qty:hover {
@@ -181,7 +187,7 @@ input {
 
 #fixedbutton {
   position: fixed;
-  bottom: 40px;
+  bottom: 45px;
   right: 20px;
   z-index: 99;
 }
@@ -213,4 +219,20 @@ input {
 
 body  section{
     padding: 75px 0;
+}
+
+.column{
+    float: left;
+    width: 30%;
+    padding: 1px;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#finalizarCompra{
+    display: none;
 }
